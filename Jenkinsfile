@@ -14,8 +14,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("yokesim
-                                       /train-schedule")
+                    app = docker.build("yokesim/train-schedule")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
